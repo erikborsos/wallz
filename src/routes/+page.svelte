@@ -1,10 +1,10 @@
-<script>
+<script lang="ts">
 	import ImageUpload from "./(components)/import/image-upload.svelte"
 
-	let uploadedImage = $state("")
+	let uploadedImage: ImageData | null = $state(null)
+	let canvasElement = $state<HTMLCanvasElement | null>(null)
 </script>
 
-<div class="mx-auto my-auto max-w-2xl py-30">
-	<ImageUpload bind:uploadedImage />
-	{uploadedImage}
+<div class="space-y-4">
+	<ImageUpload bind:uploadedImage bind:canvasElement />
 </div>

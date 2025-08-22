@@ -28,8 +28,7 @@ const LAB_SCALE_B = 200.0
 const LAB_LIGHTNESS_OFFSET = 16.0
 
 const LUMINANCE_WEIGHTS = { r: 0.2126, g: 0.7152, b: 0.0722 }
-
-interface ColorizeOptions {
+export interface ColorizeOptions {
 	strength: number
 	saturation: number
 	contrast: number

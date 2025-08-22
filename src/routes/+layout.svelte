@@ -2,6 +2,8 @@
 	import "../app.css"
 	import { ModeWatcher } from "mode-watcher"
 	import favicon from "$lib/assets/favicon.svg"
+	import Header from "./(components)/header/header.svelte"
+	import Footer from "./(components)/footer/footer.svelte"
 
 	let { children } = $props()
 </script>
@@ -10,5 +12,10 @@
 	<link rel="icon" href={favicon} />
 </svelte:head>
 
-<ModeWatcher />
-{@render children?.()}
+<ModeWatcher disableTransitions={false} />
+
+<Header />
+<div class="mx-auto min-h-screen w-full max-w-4xl pt-24 pb-8">
+	{@render children?.()}
+</div>
+<Footer />
